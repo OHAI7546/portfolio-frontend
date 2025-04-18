@@ -1,0 +1,239 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(30px, 5vw, 50px) clamp(10px, 2vw, 20px);
+  min-height: 60vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.projects h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(8px, 2vw, 10px);
+  text-transform: none;
+  border: none;
+}
+
+.projects h2::before,
+.projects h2::after {
+  content: none;
+}
+
+.projects h2 span {
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  max-width: 800px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: clamp(10px, 2vw, 20px);
+  margin-bottom: clamp(10px, 2vw, 20px);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: clamp(200px, 30vw, 300px);
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  background-clip: border-box;
+  padding: 2px;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: clamp(5px, 1.5vw, 10px);
+}
+
+.project-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin-bottom: clamp(8px, 2vw, 15px);
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(5px, 1vw, 10px);
+  margin-bottom: clamp(8px, 2vw, 15px);
+}
+
+.tech-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  padding: clamp(3px, 0.8vw, 5px) clamp(6px, 1.5vw, 10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-links {
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+}
+
+.project-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: clamp(5px, 1.5vw, 8px) clamp(8px, 2vw, 15px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s;
+}
+
+.project-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.button-icon {
+  width: clamp(16px, 3vw, 20px);
+  height: clamp(16px, 3vw, 20px);
+}
+
+.no-projects {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* Responsive design */
+@media (min-width: 1200px) {
+  .projects {
+    padding: 60px 30px;
+  }
+
+  .project-card {
+    max-width: 900px; /* Slightly wider on large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 15px;
+    min-height: 50vh;
+  }
+
+  .project-card {
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .project-image {
+    width: clamp(150px, 25vw, 250px);
+    margin-bottom: 15px;
+  }
+
+  .project-content {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .project-links {
+    justify-content: center; /* Center buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 30px 10px;
+    min-height: 40vh;
+  }
+
+  .project-card {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .project-image {
+    width: clamp(120px, 20vw, 200px);
+  }
+
+  .project-content h3 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+
+  .project-description {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  }
+
+  .tech-tag {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+  }
+
+  .project-button {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    padding: 20px 5px;
+    min-height: 35vh;
+  }
+
+  .project-card {
+    max-width: 98%;
+    padding: 8px;
+  }
+
+  .project-image {
+    width: clamp(100px, 18vw, 150px);
+  }
+
+  .project-content h3 {
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  }
+
+  .project-description {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+  }
+
+  .tech-tag {
+    font-size: clamp(0.5rem, 0.9vw, 0.7rem);
+    padding: 3px 6px;
+  }
+
+  .project-button {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    padding: 4px 8px;
+  }
+
+  .button-icon {
+    width: 14px;
+    height: 14px;
+  }
+}

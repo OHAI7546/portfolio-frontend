@@ -1,0 +1,70 @@
+.tech-stack {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .tech-stack h1 {
+    font-family: 'Poppins', sans-serif; /* Match the initial screenshot's font */
+    font-weight: 200; /* Bold */
+    font-size: 1rem; /* Larger font size to match the reference */
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Already applied in JSX, but ensure consistency */
+  }
+
+  .tech-stack h2 {
+    font-family: 'Poppins', sans-serif; /* Match the initial screenshot's font */
+    font-weight: 500; /* Bold */
+    font-size: 2rem; /* Larger font size to match the reference */
+    margin-bottom: 10px;
+    text-transform: none; /* Already applied in JSX, but ensure consistency */
+    border: none; /* Remove any potential border causing the blue line */
+  }
+  
+  .tech-stack h2::before,
+  .tech-stack h2::after {
+    content: none; /* Remove any pseudo-elements causing the blue line */
+  }
+  
+  .tech-stack h2 span {
+    background: linear-gradient(90deg, #ff6f61, #d83af5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Match the reference layout */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+  
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-5px); /* Hover effect similar to reference */
+  }
+  
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Ensure circular shape */
+    object-fit: contain; /* Ensure icon fits within the circle */
+  }
+  
+  .tech-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+  }

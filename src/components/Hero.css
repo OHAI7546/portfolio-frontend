@@ -1,0 +1,138 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 80px 20px 40px; /* Reduced top padding slightly to match shorter height */
+  position: relative;
+  background-image: url('/images/tech-workspace3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  min-height: 70vh; /* Reduced from 100vh to shorten the section */
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 85%; /* Reduce the width to 80% of the viewport */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Overlay for readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+/* Ensure content is above the overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  text-transform: none;
+  border: none;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* Dark mode adjustments */
+.App.dark .hero::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px 30px;
+    border-radius: 15px;
+    min-height: 60vh; /* Slightly shorter on tablets */
+  }
+
+  .hero::before {
+    border-radius: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 20px 20px;
+    border-radius: 10px;
+    min-height: 50vh; /* Even shorter on mobile */
+  }
+
+  .hero::before {
+    border-radius: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

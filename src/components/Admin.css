@@ -1,0 +1,118 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .admin h2 {
+    font-family: 'Poppins', sans-serif; /* Match the initial screenshot's font */
+    font-weight: 500; /* Bold */
+    font-size: 2rem; /* Larger font size to match the reference */
+    margin-bottom: 10px;
+    text-transform: none; /* Already applied in JSX, but ensure consistency */
+    border: none; /* Remove any potential border causing the blue line */
+  }
+  
+  .admin h2 span {
+    background: linear-gradient(90deg, #ff6f61, #d83af5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .admin form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .admin input,
+  .admin textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: transparent;
+    color: inherit;
+  }
+  
+  .admin textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .admin button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(90deg, #ff6f61, #d83af5);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .admin button:hover:not(:disabled) {
+    transform: scale(1.05);
+  }
+  
+  .admin button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .admin .error {
+    font-family: 'Poppins', sans-serif;
+    color: #ff6f61;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .admin p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .project-list {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-item span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .project-actions button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .project-actions button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    transform: none;
+  }

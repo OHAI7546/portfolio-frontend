@@ -1,0 +1,202 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: clamp(20px, 5vw, 50px) clamp(10px, 2vw, 20px);
+  min-height: 90vh; /* Increased to ensure all content fits */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(8px, 2vw, 10px);
+  text-transform: none;
+  border: none;
+  /* Override index.css if needed */
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.contact h2::before,
+.contact h2::after {
+  content: none;
+}
+
+.contact h2 span {
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 15px);
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+
+.contact input,
+.contact textarea {
+  font-family: 'Poppins', sans-serif;
+  padding: clamp(6px, 1.5vw, 10px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  background: transparent;
+  color: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact textarea {
+  height: clamp(60px, 15vw, 100px);
+  resize: none;
+}
+
+.contact button {
+  font-family: 'Poppins', sans-serif;
+  padding: clamp(6px, 1.5vw, 10px);
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, #ff6f61, #d83af5);
+  color: white;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: transform 0.3s;
+  width: auto;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+.status-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: clamp(5px, 1vw, 10px) 0;
+}
+
+/* Resolve potential conflict with index.css .social-links */
+.social-links {
+  display: flex;
+  gap: clamp(10px, 2vw, 20px);
+  margin-top: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Override index.css styles */
+  margin-top: clamp(10px, 2vw, 20px) !important; /* Match Contact.css */
+}
+
+.social-icon {
+  width: clamp(30px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (min-width: 1200px) {
+  .contact {
+    padding: 60px 30px;
+  }
+
+  .contact form {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 15px;
+    min-height: 70vh; /* Increased for tablets */
+  }
+
+  .contact form {
+    max-width: 90%;
+  }
+
+  .contact textarea {
+    height: clamp(50px, 12vw, 80px);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 30px 10px;
+    min-height: 60vh; /* Increased for mobile */
+  }
+
+  .contact form {
+    max-width: 95%;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    padding: clamp(5px, 1.2vw, 8px);
+  }
+
+  .contact textarea {
+    height: clamp(40px, 10vw, 60px);
+  }
+
+  .contact button {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    padding: clamp(5px, 1.2vw, 8px);
+  }
+
+  .social-icon {
+    width: clamp(25px, 4vw, 35px);
+    height: clamp(25px, 4vw, 35px);
+  }
+}
+
+@media (max-width: 320px) {
+  .contact {
+    padding: 20px 5px;
+    min-height: 50vh; /* Increased for small screens */
+  }
+
+  .contact form {
+    max-width: 98%;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    padding: clamp(4px, 1vw, 6px);
+  }
+
+  .contact textarea {
+    height: clamp(30px, 8vw, 50px);
+  }
+
+  .contact button {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    padding: clamp(4px, 1vw, 6px);
+  }
+
+  .status-message {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+  }
+
+  .social-links {
+    gap: clamp(8px, 1.5vw, 15px);
+  }
+
+  .social-icon {
+    width: clamp(20px, 3.5vw, 30px);
+    height: clamp(20px, 3.5vw, 30px);
+  }
+}

@@ -1,0 +1,99 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 60vh; /* Ensure the section takes up enough vertical space for centering */
+  }
+  
+  .experience h2 {
+    font-family: 'Poppins', sans-serif; /* Match the initial screenshot's font */
+    font-weight: 500; /* Bold */
+    font-size: 2rem; /* Larger font size to match the reference */
+    margin-bottom: 10px;
+    text-transform: none; /* Already applied in JSX, but ensure consistency */
+    border: none; /* Remove any potential border causing the blue line */
+  }
+  
+  .experience h2::before,
+  .experience h2::after {
+    content: none; /* Remove any pseudo-elements */
+  }
+  
+  .experience h2 span {
+    background: linear-gradient(90deg, #ff6f61, #d83af5); /* Match Tech Stack, Contact, and Projects gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px; /* Align with the center of the marker */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #ff6f61, #d83af5); /* Gradient for the timeline */
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, #ff6f61, #d83af5);
+    border-radius: 50%;
+    position: absolute;
+    left: 10px; /* Center the marker on the timeline */
+    top: 5px;
+    z-index: 1;
+    border: 3px solid #fff; /* White border to match screenshot */
+  }
+  
+  .timeline-content {
+    margin-left: 50px; /* Space for the timeline and marker */
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05); /* Subtle background for contrast */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  
+  .timeline-content ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .timeline-content li {
+    margin-bottom: 5px;
+  }

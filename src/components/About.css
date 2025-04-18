@@ -1,0 +1,117 @@
+.about {
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+}
+
+.about-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--text-color); /* Use variable from App.css */
+}
+
+.about-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: none;
+  border: none;
+}
+
+.about-text h2::before,
+.about-text h2::after {
+  content: none;
+}
+
+.about-text h2 span {
+  background: linear-gradient(90deg, #ff6f61, #d83af5); /* Match gradient from App.css */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode adjustments */
+.App.dark .about-image img {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-text {
+    text-align: center; /* Center text on mobile */
+  }
+
+  .about-text h1 {
+    font-size: 0.9rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 0.8rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
