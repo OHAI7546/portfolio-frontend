@@ -13,7 +13,7 @@ const About = () => (
       <div className="about-text">
         <h1>Know About Me</h1>
         <h2>
-          <span>Full-Stack Engineer</span> And{' '}
+          <span>Full-Stack Software Engineer</span> And{' '}
           <span>a little bit of everything</span>
         </h2>
         <p>
