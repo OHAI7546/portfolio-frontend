@@ -18,7 +18,7 @@ const About = () => (
         </h2>
         <p>
           Full-stack Software Engineer with experience building scalable and efficient
-          web applications using Java, Spring Boot, React, and PostgreSQL. Proficient in
+          web applications. Proficient in
           crafting responsive designs, developing secure APIs, and collaborating with
           cross-functional teams to deliver user-centric solutions. Adept at managing
           projects, ensuring seamless integration between frontend and backend, and

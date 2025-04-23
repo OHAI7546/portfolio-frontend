@@ -8,6 +8,11 @@
   min-height: 60vh;
   width: 100%;
   box-sizing: border-box;
+  background-color: #f0e7f5; /* Light mode background */
+}
+
+.dark-mode .projects {
+  background-color: #2d1f3a; /* Dark mode background */
 }
 
 .projects h2 {
@@ -36,14 +41,18 @@
   gap: clamp(10px, 2vw, 20px);
   max-width: 800px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.8); /* Light mode card background */
   border-radius: 10px;
   padding: clamp(10px, 2vw, 20px);
   margin-bottom: clamp(10px, 2vw, 20px);
   border: 1px solid transparent;
-  background-clip: padding-box;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+}
+
+.dark-mode .project-card {
+  background: rgba(30, 30, 30, 0.9); /* Darker, more visible background for dark mode */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Slightly darker shadow for depth */
 }
 
 .project-card:hover {
@@ -51,7 +60,7 @@
 }
 
 .project-image {
-  width: clamp(200px, 30vw, 300px);
+  width: 200px;
   height: auto;
   border-radius: 8px;
   border: 2px solid transparent;
@@ -63,6 +72,11 @@
 .project-content {
   flex: 1;
   text-align: left;
+  color: #333; /* Dark text for light mode */
+}
+
+.dark-mode .project-content {
+  color: #e0e0e0; /* Light text for dark mode */
 }
 
 .project-content h3 {
@@ -92,6 +106,13 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #333; /* Dark text for light mode */
+}
+
+.dark-mode .tech-tag {
+  background: rgba(255, 255, 255, 0.2); /* Slightly less transparent in dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #e0e0e0; /* Light text for dark mode */
 }
 
 .project-links {
@@ -109,12 +130,23 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 175, 0.2);
   transition: background 0.3s;
+  color: #1e90ff; /* Default link color */
+}
+
+.dark-mode .project-button {
+  background: rgba(255, 255, 255, 0.2); /* Slightly less transparent in dark mode */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #87cefa; /* Lighter link color for dark mode */
 }
 
 .project-button:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .project-button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .button-icon {
@@ -125,6 +157,11 @@
 .no-projects {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
+  color: #333;
+}
+
+.dark-mode .no-projects {
+  color: #e0e0e0;
 }
 
 /* Responsive design */
@@ -134,7 +171,7 @@
   }
 
   .project-card {
-    max-width: 900px; /* Slightly wider on large screens */
+    max-width: 900px;
   }
 }
 
@@ -145,7 +182,7 @@
   }
 
   .project-card {
-    flex-direction: column; /* Stack image and content vertically */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     max-width: 90%;
@@ -153,16 +190,16 @@
   }
 
   .project-image {
-    width: clamp(150px, 25vw, 250px);
+    width: 150px;
     margin-bottom: 15px;
   }
 
   .project-content {
-    text-align: center; /* Center text on smaller screens */
+    text-align: center;
   }
 
   .project-links {
-    justify-content: center; /* Center buttons */
+    justify-content: center;
   }
 }
 
@@ -178,7 +215,7 @@
   }
 
   .project-image {
-    width: clamp(120px, 20vw, 200px);
+    width: 120px;
   }
 
   .project-content h3 {
@@ -211,7 +248,7 @@
   }
 
   .project-image {
-    width: clamp(100px, 18vw, 150px);
+    width: 100px;
   }
 
   .project-content h3 {

@@ -44,7 +44,7 @@ const TechStack = () => (
     transition={{ duration: 0.8 }}
     className="tech-stack"
   >
-    <h1>I constantly try to improve</h1>
+    <h1>I continuously refine and expand</h1>
     <h2><span>My Tech Stack</span></h2>
     <div className="tech-grid">
       {techStack.map((tech, index) => (

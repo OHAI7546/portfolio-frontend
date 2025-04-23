@@ -1,0 +1,34 @@
+[
+    {
+        "title": "IFARMR",
+        "description": "Empowering farmers with innovative tools and shared knowledge to boost productivity, streamline operations, and support sustainable farming. The app offers an all-in-one platform for managing crops, livestock, and inventory while fostering a connected, eco-conscious agricultural community.",
+        "technologies": "React, Spring Boot, PostgreSQL",
+        "imagePath": "/images/ifarmr.JPG",
+        "websiteUrl": "https://ohai7546.github.io/IFARMR/",
+        "github": "https://github.com/OHAI7546/IFARMR_BE.git"
+    },
+    {
+        "title": "LIMITFLEX",
+        "description": "Admin dashboard as well as transfer history for managing reseller transactions.",
+        "technologies": "React, Java, Springboot, Docker, MySQL",
+        "imagePath": "/images/limitflex.JPG",
+        "websiteUrl": "https://www.limitflex.com/",
+        "github": null
+    },
+    {
+        "title": "BANKING APP",
+        "description": "A secure banking application with transaction management.",
+        "technologies": "Spring Boot, Java, MySQL",
+        "imagePath": "/images/bankapp.jpeg",
+        "websiteUrl": null,
+        "github": "https://github.com/OHAI7546/BankingApp.git"
+    },
+    {
+        "title": "TO DO",
+        "description": "A secure banking application with transaction management.",
+        "technologies": "Spring Boot, Java, MySQL",
+        "imagePath": "/images/todo.jpeg",
+        "websiteUrl": null,
+        "github": "https://github.com/ChibuezeIkedinobi/To-Do-App.git"
+    }
+]
