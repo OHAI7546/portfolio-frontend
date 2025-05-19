@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 // Import social media icons from assets
 import githubIcon from '../assets/github.png';
 import linkedinIcon from '../assets/linkedin.png';
 import twitterIcon from '../assets/twitter.png';
+import whatsappIcon from '../assets/whatsapp.png'; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -16,16 +17,35 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await axios.post('http://localhost:8080/api/contact', formData);
-      setStatus('Message sent successfully! You will hear back soon.');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setStatus('Error sending message. Please try again.');
-      console.error('Contact form error:', error);
-    }
+
+    // EmailJS configuration (using environment variables)
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID; // service_m53js7a
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID; // template_olfaf39
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID; // dS5U5pf7UA-jTIiFK
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        userId
+      )
+      .then(
+        (response) => {
+          setStatus('Message sent successfully! You will hear back soon.');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          setStatus('Error sending message. Please try again.');
+          console.error('EmailJS error:', error);
+        }
+      );
   };
 
   return (
@@ -72,6 +92,9 @@ const Contact = () => {
         </a>
         <a href="https://x.com/Ohai_7546" target="_blank" rel="noopener noreferrer">
           <img src={twitterIcon} alt="Twitter" className="social-icon" />
+        </a>
+        <a href="https://wa.me/+2348183536802" target="_blank" rel="noopener noreferrer">
+          <img src={whatsappIcon} alt="WhatsApp" className="social-icon" />
         </a>
       </div>
     </motion.div>
